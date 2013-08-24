@@ -1,0 +1,22 @@
+<paquet
+	prefix="formulaires_yaml"
+	categorie="outil"
+	version="1.0.0"
+	etat="dev"
+	compatibilite="[3.0.10;3.0.*]"
+	logo=""
+	documentation=""
+>
+	<!--
+		Paquet genere le 2013-08-24 11:18:51
+	-->
+
+	<nom>Formulaires YAML</nom>
+
+	<auteur>Michel Bystranowski</auteur>
+
+	<licence>GNU/GPL</licence>
+
+  <pipeline nom="styliser" inclure="formulaires_yaml_pipelines.php" />
+
+</paquet>
