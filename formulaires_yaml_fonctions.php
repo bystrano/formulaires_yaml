@@ -22,4 +22,18 @@ function balise_FORMULAIRE_ ($p) {
   return balise_FORMULAIRE__dist($p);
 }
 
+function fusionner_tableaux ($a, $b) {
+
+  foreach ($b as $key => $el) {
+    if ((gettype($a[$key]) == 'array')
+     && (gettype($el)      == 'array')) {
+
+      $a[$key] = fusionner_tableaux($a[$key], $el);
+    } else {
+      $a[$key] = $el;
+    }
+  }
+  return $a;
+}
+
 ?>

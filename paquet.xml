@@ -1,7 +1,7 @@
 <paquet
 	prefix="formulaires_yaml"
 	categorie="outil"
-	version="1.0.0"
+	version="1.0.1"
 	etat="dev"
 	compatibilite="[3.0.10;3.0.*]"
 	logo=""
@@ -18,5 +18,8 @@
 	<licence>GNU/GPL</licence>
 
   <pipeline nom="styliser" inclure="formulaires_yaml_pipelines.php" />
+  <pipeline nom="formulaire_charger" inclure="formulaires_yaml_pipelines.php" />
+
+  <necessite nom="yaml" compatibilite="[1.5.0;[" />
 
 </paquet>

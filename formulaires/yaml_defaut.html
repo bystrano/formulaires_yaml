@@ -1,0 +1,21 @@
+<div class="formulaire_spip formulaire_#ENV{nom_form}">
+
+  [<div class="reponse_formulaire reponse_formulaire_erreur">
+    (#ENV*{message_erreur})
+  </div>]
+  [<div class="reponse_formulaire reponse_formulaire_ok">
+    (#ENV*{message_ok})
+  </div>]
+
+  <form action="#ENV{action}" method="post">
+    #ACTION_FORMULAIRE{#ENV{action}}
+
+    <ul>
+      #GENERER_SAISIES{#ENV{saisies}}
+    </ul>
+
+    <p class="boutons">
+      <input type="submit" value="OK" />
+    </p>
+  </form>
+</div>
