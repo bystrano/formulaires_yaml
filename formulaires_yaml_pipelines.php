@@ -25,10 +25,12 @@ function formulaires_yaml_formulaire_charger ($flux) {
                  recuperer_fond('formulaires/'.$nom_formulaire.'_yaml',
                                 array('recuperer_saisies' => TRUE)));
 
-    $flux['data'] = array(
-                      'saisies'  => $saisies,
-                      'nom_form' => $nom_formulaire,
-                    );
+    $flux['data'] = fusionner_tableaux(
+                      $flux['data'],
+                      array(
+                        'saisies'  => $saisies,
+                        'nom_form' => $nom_formulaire,
+                    ));
   }
 
   return $flux;
