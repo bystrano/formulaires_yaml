@@ -1,0 +1,30 @@
+Formulaires YAML
+================
+
+Pour rendre l'écriture de formulaires un peu moins répétitive et
+fastidieuse, le plugin saisies permet d'écrire des listes de saisies
+directement dans un tableau qu'on peut passer à la balise #GENERER_SAISIES.
+
+Ce plugin propose de pousser cette idée un peu plus loin, en permettant de
+créer des formulaires en écrivant simplement des fichiers yaml qui décrivent
+les saisies.
+
+Le plugin ne touche pas au fonctionnement habituel des formulaires CVT.
+Pour l'utiliser, il faut se plier à une autre convention de nommage des
+fichiers.
+
+P.ex, pour définir le formulaire #FORMULAIRE_XXX, il faut créer
+un fichier 'formulaires/xxx_yaml.html' dans lequel on écrit la liste
+des saisies en YAML. Ce fichier sera interprété comme un squelette, et on
+peut y utiliser des chaines de langue, filtres, etc.
+
+Le tableau décrit dans le fichier yaml sera passé dans #GENERER_SAISIES
+pour générer le formulaire automatiquement. Le squelette pour la génération
+des formulaires est dans formulaires/yaml_defaut.html, mais on peut le
+surcharger pour un formulaire particulier en créant un fichier
+formulaires/xxx.html.
+
+Même si l'on appelle le formulaire avec la balise #FORMULAIRE_XXX, le
+fichier php contenant les fonctions charger, vérifier et traiter doit
+s'appeller xxx_yaml.php, et les fonctions doivent s'appeler xxx_yaml_charger,
+xxx_yaml_verifier, etc.
