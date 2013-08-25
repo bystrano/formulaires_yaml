@@ -1,7 +1,7 @@
 <paquet
 	prefix="formulaires_yaml"
 	categorie="outil"
-	version="1.0.1"
+	version="1.0.2"
 	etat="dev"
 	compatibilite="[3.0.10;3.0.*]"
 	logo=""
@@ -21,5 +21,6 @@
   <pipeline nom="formulaire_charger" inclure="formulaires_yaml_pipelines.php" />
 
   <necessite nom="yaml" compatibilite="[1.5.0;[" />
+  <necessite nom="saisies" compatibilite="[1.31.4;[" />
 
 </paquet>
