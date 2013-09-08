@@ -23,7 +23,8 @@ function formulaires_yaml_formulaire_charger ($flux) {
     include_spip('inc/yaml');
     $saisies = yaml_decode(
                  recuperer_fond('formulaires/'.$nom_formulaire.'_yaml',
-                                array('recuperer_saisies' => TRUE)));
+                                array('recuperer_saisies' => TRUE,
+                                      'args_form' => $flux['args']['args'])));
 
     $flux['data'] = fusionner_tableaux(
                       $flux['data'],

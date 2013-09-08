@@ -16,7 +16,9 @@ fichiers.
 P.ex, pour définir le formulaire #FORMULAIRE_XXX, il faut créer
 un fichier 'formulaires/xxx_yaml.html' dans lequel on écrit la liste
 des saisies en YAML. Ce fichier sera interprété comme un squelette, et on
-peut y utiliser des chaines de langue, filtres, etc.
+peut y utiliser des chaines de langue, filtres, etc. On peux y
+récupérer les paramètres passés à la balise formulaire en utilisant le
+tableau #ENV{args_form}.
 
 Le tableau décrit dans le fichier yaml sera passé dans #GENERER_SAISIES
 pour générer le formulaire automatiquement. Le squelette pour la génération
