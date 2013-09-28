@@ -26,11 +26,29 @@ function formulaires_yaml_formulaire_charger ($flux) {
                                 array('recuperer_saisies' => TRUE,
                                       'args_form' => $flux['args']['args'])));
 
+    /* On peut aussi définir des boutons pour le formulaire, en utilisant
+       un tableau de la forme :
+
+           array(
+             'saisies' => array( ... ),
+             'boutons' => array(
+                            array( 'nom'    => 'cancel'
+                                   'valeur' => 'Annuler'),
+                            array( 'nom'    => 'ok',
+                                   'valeur' => 'Confirmer')))
+    */
+    if (array_key_exists('saisies', $saisies)
+     OR array_key_exists('boutons', $saisies)) {
+      $boutons = $saisies['boutons'];
+      $saisies = $saisies['saisies'];
+    }
+
     $flux['data'] = fusionner_tableaux(
                       $flux['data'],
                       array(
-                        'saisies'  => $saisies,
                         'nom_form' => $nom_formulaire,
+                        'saisies'  => $saisies,
+                        'boutons'  => $boutons ? $boutons : array(array('valeur' => 'OK')),
                     ));
   }
 

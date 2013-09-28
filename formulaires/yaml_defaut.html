@@ -20,8 +20,11 @@
       #GENERER_SAISIES{#ENV{saisies}}
     </ul>
 
-    <p class="boutons">
-      <input type="submit" value="OK" />
-    </p>
+     <p class="boutons">
+      <BOUCLE_boutons(DATA) {source tableau, #ENV{boutons}}>
+        <input type="submit"[ value="(#VALEUR|table_valeur{valeur})"]
+               [name="(#VALEUR|table_valeur{nom})"] />
+      </BOUCLE_boutons>
+     </p>
   </form>
 </div>
