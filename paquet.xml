@@ -1,9 +1,9 @@
 <paquet
 	prefix="formulaires_yaml"
 	categorie="outil"
-	version="1.1.2"
+	version="1.1.3"
 	etat="dev"
-	compatibilite="[3.0.10;3.0.*]"
+	compatibilite="[3.0.10;3.1.*]"
 	logo=""
 	documentation=""
 >
@@ -17,10 +17,10 @@
 
 	<licence>GNU/GPL</licence>
 
-  <pipeline nom="styliser" inclure="formulaires_yaml_pipelines.php" />
-  <pipeline nom="formulaire_charger" inclure="formulaires_yaml_pipelines.php" />
+	<pipeline nom="styliser" inclure="formulaires_yaml_pipelines.php" />
+	<pipeline nom="formulaire_charger" inclure="formulaires_yaml_pipelines.php" />
 
-  <necessite nom="yaml" compatibilite="[1.5.0;[" />
-  <necessite nom="saisies" compatibilite="[1.31.4;[" />
+	<necessite nom="yaml" compatibilite="[1.5.0;[" />
+	<necessite nom="saisies" compatibilite="[1.31.4;[" />
 
 </paquet>
